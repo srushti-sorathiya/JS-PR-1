@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Details</title>
+
+    <style>
+        *{
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: rgb(240, 220, 203);
+        }
+        .container{
+            max-width: 700px;
+            margin: 0 auto;
+            color:  rgb(11, 15, 58);
+        }
+        h1{
+            text-align: center;
+        }
+        .center{
+            display: flex;
+            align-items: center;
+        }
+        .center h3{
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Employee Detail</h1>
+        </div>
+    </header>
+    <section>
+        <div class="container">
+            <div class="center">
+                <h3>Employee name :-</h3>
+                <p>Srushti Sorathiya</p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="center">
+                <h3>Previce salary :-</h3>
+                <p id="Pervise"></p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="center">
+                <h3>increment :-</h3>
+                <p id="increment"></p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="center">
+                <h3>increment salary :-</h3>
+                <p id="incrementSalary"></p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- javascript -->
+    <script>
+        var sum,total;
+        var salary =10000;
+        if(salary<5000){
+            // console.log("10%");
+            // console.log(salary);
+            sum=salary*10/100;
+            // console.log(sum);
+            total=sum+salary;
+            // console.log(total);   
+            document.getElementById("Pervise").innerHTML=salary
+            document.getElementById("increment").innerHTML="10%"
+            document.getElementById("incrementSalary").innerHTML=total
+        }
+        else if(salary>=5000 && salary<15000){
+            // console.log("20%");
+            // console.log(salary);
+            sum=salary*20/100;
+            // console.log(sum);
+            total=sum+salary;
+            // console.log(total);
+            document.getElementById("Pervise").innerHTML=salary;
+            document.getElementById("increment").innerHTML="20%";
+            document.getElementById("incrementSalary").innerHTML=total;
+        }
+        else if(salary>=15000 && salary<=20000){
+            // console.log("30%");
+            // console.log(salary);
+            sum=salary*30/100;
+            // console.log(sum);
+            total=sum+salary;
+            // console.log(total);
+            document.getElementById("Pervise").innerHTML=salary;
+            document.getElementById("increment").innerHTML="30%";
+            document.getElementById("incrementSalary").innerHTML=total;
+        }
+    </script>
+</body>
+</html>

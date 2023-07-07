@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Card</title>
+
+    <style>
+        body{
+            background-color: rgb(235, 244, 244);
+        }
+        .container{
+            max-width: 430px;
+            margin: 0 auto;
+            color: #161415
+        }
+        h1{
+            text-align: center;
+            font-size: 3rem;
+        }
+        .student{
+            display: flex;
+            align-items: center;
+        }
+        .student h3{
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Report Card</h1>
+        </div>
+    </header>
+    <section>
+        <div class="container">
+            <div class="student">
+                <h3>Name :-</h3>
+                <p>Srushti Sorathiya</p>
+            </div>
+            <div class="student">
+                <h3>Collage :-</h3>
+                <p>Swarnim Start-up</p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="student">
+                <h3>laguage :-</h3>
+                <p>HTML,CSS,JS</p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="student">
+                <h3>total marks :-</h3>
+                <p><span id="persentage"></span>/ 100</p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="student">
+                <h3>persentage :-</h3>
+                <p><span id="persentages"></span>%</p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="student">
+                <h3>grade :-</h3>
+                <p id="grade"></p>
+            </div>
+        </div>
+    </section>
+    
+    
+    <!-- javascript start -->
+    <script>
+        var num=95;
+        document.getElementById("persentage").innerHTML=num;
+        document.getElementById("persentages").innerHTML=num;
+
+        if(num <= 50){
+            // console.log("D Grade");
+            document.getElementById("grade").innerHTML="D"
+        }
+        else if(num>=50 && num<=60){
+            // console.log("C Grade");
+            document.getElementById("grade").innerHTML="C"
+        }
+        else if(num>=60 && num<=70){
+            // console.log("B Grade");
+            document.getElementById("grade").innerHTML="B"
+        }
+        else if(num>=70 && num<=100){
+            // console.log("A Grade");
+            document.getElementById("grade").innerHTML="A"
+        }
+        else{
+            // console.log("default value");
+            document.getElementById("grade").innerHTML="fail"
+        }
+    </script>
+
+</body>
+</html>
